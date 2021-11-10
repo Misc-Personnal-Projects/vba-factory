@@ -84,9 +84,9 @@ End Function '--- SetParameters ---'
 '
 '#Parameters :
 '
-'#Return : 
+'#Return : Array of parameter values
 '
-'#Example :
+'#Example : try
 '
 '#Source :
 '----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ End Function '--- GetParameters ---'
 '
 '#Parameters :
 '
-'#Return : string with all members value
+'#Return : String with all members value
 '
 '#Example :
 '
