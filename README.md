@@ -8,6 +8,7 @@ Standardize the developpement of VBA application by creating a reproductible and
 ## Description
 
 ## Roadmap
+- [ ] Create module export solution
 
 - [ ] Improve cls_Database
     - [ ] Add DAO
@@ -24,7 +25,7 @@ Standardize the developpement of VBA application by creating a reproductible and
  
 - [ ] Create architecture diagram
     - [ ] Draw architecture diagram of the factory
-    - [ ] Import all diagram into githup
+    - [ ] Import all diagram into github
     
     
 - [ ] Object-Relational Mapping creation (fork from [VBA-ORM](https://github.com/lucschulz/VBA_ORM))
