@@ -15,7 +15,7 @@ Attribute VB_Exposed = False
 '#Version :
 '
 '#References : Reference_Name
-'#Dependencies : classes à importer
+'#Dependencies : classes ï¿½ importer
 '#Related :
 '   MethodsName
 '
@@ -38,7 +38,7 @@ Option Explicit
 '#Name : SetParameters
 '#Description : Define object parameters with parameter values passed by reference
 '#WARNING :
-'#Contributors : Jérôme Favre-Rochex, Victor Hüni
+'#Contributors : Jï¿½rï¿½me Favre-Rochex, Victor Hï¿½ni
 '
 '#Dependencies :
 '#Related :
@@ -77,14 +77,14 @@ End Function '--- SetParameters ---'
 '#Name : GetParameters
 '#Description : Return object parameters with array of parameter values passed by reference
 '#WARNING :
-'#Contributors : Jérôme Favre-Rochex, Victor Hüni
+'#Contributors : Jï¿½rï¿½me Favre-Rochex, Victor Hï¿½ni
 '
 '#Dependencies :
 '#Related :
 '
 '#Parameters :
 '
-'#Return : array of parameter values
+'#Return : 
 '
 '#Example :
 '
@@ -110,7 +110,7 @@ End Function '--- GetParameters ---'
 '#Name : GetIdentity
 '#Description : Return identity card of the instance
 '#WARNING :
-'#Contributors : Jérôme Favre-Rochex, Victor Hüni
+'#Contributors : Jï¿½rï¿½me Favre-Rochex, Victor Hï¿½ni
 '
 '#Dependencies :
 '#Related :
