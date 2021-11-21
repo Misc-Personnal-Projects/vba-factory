@@ -20,8 +20,8 @@ Attribute VB_Exposed = False
 '#WARNING :
 '
 '#Contributors :
-'   - Victor H�ni
-'   - J�r�me Favre-Rochex
+'   - Victor Hüni
+'   - Jérôme Favre-Rochex
 '
 '#References :
 '   - Microsoft ActiveX Data Objects 6.1 Library
@@ -197,7 +197,7 @@ End Sub
 '
 '#Description:      Get the full path of the DB with her extension
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   30.04.2021
 '
 '#Dependencies :    Class_Initialize
@@ -222,7 +222,7 @@ End Function
 '#WARNING:          p_type needs to have standards value stored in a enum that should be copy/paste in the mod_GlobalRef when using this classes
 '                   p_path should contains the name of the folder only for a TXT, CSV source, and should contains path + name for an ACCDB & XLSX source
 '
-'#Contributors :    J�r�me Favre-Rochex, Victor H�ni
+'#Contributors :    Jérôme Favre-Rochex, Victor Hüni
 '#Creation Date :   01.10.2020
 '#Version :         1.2.0
 '
@@ -295,7 +295,7 @@ End Function
 '
 '#WARNING :         This methods needs that the CnStr member has been initialized
 '
-'#Contributors :    J�r�me Favre-Rochex, Victor H�ni
+'#Contributors :    Jérôme Favre-Rochex, Victor Hüni
 '#Creation Date :   01.10.2020
 '#Version :         1.2.0
 '
@@ -345,7 +345,7 @@ End Function
 '
 '#WARNING :
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   01.10.2020
 '#Version :         1.2.0
 '
@@ -414,7 +414,7 @@ End Function
 '
 '#Warning :         Generate an custom error that could be handle. This error is generate each time a vba type isn't adapt to ADODB
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   01.10.2020
 '#Version :         1.0.0
 '
@@ -492,7 +492,7 @@ End Function
 '
 '#WARNING:
 '
-'#Contributors :    Victor H�ni, J�r�me Favre-Rochex
+'#Contributors :    Victor Hüni, Jérôme Favre-Rochex
 '#Creation Date :   16.12.2020
 '#Version :         2.0.0
 '
@@ -730,7 +730,7 @@ End Function
 '#WARNING :         This function could not use the ExecuteParameters Function due to it's specificity it has to open it's own recordset
 '                   A select max
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   01.10.2020
 '#Version :         1.0.0
 '
@@ -768,7 +768,7 @@ End Function
 '
 '#WARNING :         This Function copy/paste the db and compact the copy AND then delete the old one
 '
-'#Contributors :    Victor H�ni, J�r�me Favre-Rochex
+'#Contributors :    Victor Hüni, Jérôme Favre-Rochex
 '#Creation Date :   01.10.2020
 '#Version :         1.0.0
 '
@@ -813,7 +813,7 @@ End Sub
 '
 '#WARNING :         Type should respect the rules : https://docs.microsoft.com/en-us/sql/odbc/microsoft/microsoft-access-data-types?view=sql-server-ver15
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   19.08.2020
 '#Version :         1.0.0
 '
@@ -845,7 +845,7 @@ End Function
 '#WARNING :         This delete ALL relations not only the PRIMARY one
 '                   Always return true to no block the code for a non existing relation
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   30.04.2021
 '#Version :         1.0.0
 '
@@ -911,7 +911,7 @@ End Function
 '                   The field used as an index should have the same name in both table
 '                   fieldname could be an array to create a composite relation
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   30.04.2021
 '#Version :         1.0.0
 '
@@ -975,7 +975,7 @@ Public Function CreateTableRelationships(p_ParentTable As String, p_ChildTable A
     oDB.Relations.Append oRlt               'Add relations to the data model
     oDB.Relations.Refresh                   'Refresh relations to make the new one available
     
-    logs.Log_Action "CreateTableRelationships", Actions.Creer, Array("Cr�ation de relation: DB: " & DbName, p_ParentTable, p_ChildTable, "Index : " & idxStr)
+    logs.Log_Action "CreateTableRelationships", Actions.Creer, Array("Création de relation: DB: " & DbName, p_ParentTable, p_ChildTable, "Index : " & idxStr)
     
     
     If p_Debug Then
@@ -995,7 +995,7 @@ Public Function CreateTableRelationships(p_ParentTable As String, p_ChildTable A
         Next fld
     End If
     
-    'Ferme la base de donn�es
+    'Ferme la base de données
     oDB.Close
     Set oDB = Nothing
 
@@ -1021,7 +1021,7 @@ End Function
 '
 '#WARNING :         Doesn't work for Composite primary key
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   30.04.2021
 '#Version :         1.0.0
 '
@@ -1276,7 +1276,7 @@ End Function
 '#Name :            ExportRecordsetInEasyFormat
 '#Description :     Export a recordsetin a new csv file & save it
 '#Warning :         Need only one list object on the selected source tab
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   15.12.2020
 '#Version :         1.0.0
 '
@@ -1353,7 +1353,7 @@ End Function
 '
 '#WARNING :
 '
-'#Contributors :    Victor H�ni
+'#Contributors :    Victor Hüni
 '#Creation Date :   19.08.2020
 '#Version :         1.0.0
 '

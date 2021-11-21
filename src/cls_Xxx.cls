@@ -15,7 +15,7 @@ Attribute VB_Exposed = False
 '#Version :
 '
 '#References : Reference_Name
-'#Dependencies : classes � importer
+'#Dependencies : classes à importer
 '#Related :
 '   MethodsName
 '
@@ -38,7 +38,7 @@ Option Explicit
 '#Name : SetParameters
 '#Description : Define object parameters with parameter values passed by reference
 '#WARNING :
-'#Contributors : J�r�me Favre-Rochex, Victor H�ni
+'#Contributors : Jérôme Favre-Rochex, Victor Hüni
 '
 '#Dependencies :
 '#Related :
@@ -77,7 +77,7 @@ End Function '--- SetParameters ---'
 '#Name : GetParameters
 '#Description : Return object parameters with array of parameter values passed by reference
 '#WARNING :
-'#Contributors : J�r�me Favre-Rochex, Victor H�ni
+'#Contributors : Jérôme Favre-Rochex, Victor Hüni
 '
 '#Dependencies :
 '#Related :
@@ -86,7 +86,7 @@ End Function '--- SetParameters ---'
 '
 '#Return : Array of parameter values
 '
-'#Example : 
+'#Example : try merge conflict
 '
 '#Source :
 '----------------------------------------------------------------------------------------------------------------------------------------------------

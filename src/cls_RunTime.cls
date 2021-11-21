@@ -15,7 +15,7 @@ Attribute VB_Exposed = False
 '#Version :
 '
 '#References : Reference_Name
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   MethodsName
 '

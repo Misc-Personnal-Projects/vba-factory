@@ -7,7 +7,7 @@ Attribute VB_Name = "mod_GlobalRef"
 '#Version :
 '
 '#References : Reference_Name
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   FunctionName
 '   ProcedureName
@@ -24,8 +24,8 @@ Public Const TYP_XL As String = "EXCEL"
 Public Const ACT_INSERT As String = "Ajouter" 'usf_Administration
 Public Const ACT_MODIFY As String = "Modifier" 'usf_Administration
 Public Const ACT_REMOVE As String = "Supprimer" 'usf_Administration
-Public Const ACT_SELECT As String = "Sélectionner" 'usf_Administration
-Public Const ACT_LIMITED As String = "Limité" 'usf_Administration
+Public Const ACT_SELECT As String = "SÃ©lectionner" 'usf_Administration
+Public Const ACT_LIMITED As String = "Limiter" 'usf_Administration
 
 
 '====================================================================================================================================================
@@ -40,7 +40,7 @@ Public Enum Actions
     Sauvegarder = 5
     Envoyer = 6
     Fermer = 7
-    Sélectionner = 8
+    SÃ©lectionner = 8
 End Enum
 
 '====================================================================================================================================================
@@ -113,7 +113,7 @@ Public Const COLOR_VIEW_INT As Long = 2916003
 '====================================================================================================================================================
 '   GUEST
 '====================================================================================================================================================
-Public Const GUEST_FULLNAME_TXT As String = "Invité"
+Public Const GUEST_FULLNAME_TXT As String = "InvitÃ©"
 Public Const ANONYM_PHOTO As String = "img_silhouette.gif"
 Public Const ANONYM_FIELD_TXT As String = "xxxx"
 Public Const ANONYM_FIELD_VAL As Long = 0
@@ -132,7 +132,7 @@ Public Const ADMINISTRER_LES_DROITS_DUTILISATION As String = 1
 '====================================================================================================================================================
 '   SIMPLE DIM
 '====================================================================================================================================================
-Public Const ELT_ROLE As String = "Rôle"
+Public Const ELT_ROLE As String = "RÃ´le"
 Public Const ELT_RISK As String = "Risque"
 Public Const ELT_PROJET As String = "Projet"
 

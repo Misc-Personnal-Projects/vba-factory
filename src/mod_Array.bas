@@ -58,7 +58,7 @@ Public Const C_ERR_ARRAY_IS_FIXED_OR_LOCKED = 10&
 '#Name :            TransposeArray
 '#Description :     Transpose an array
 '#Warning :         The Worksheetfunction.Transpose bug if the array is larger than 65,536 (2^16) rows. You can use this function if you handle greater array
-'#Contributors :    Victor Hüni
+'#Contributors :    Victor HÃ¼ni
 '#Creation Date :   15.12.2020
 '#Version :         1.0.0
 '
@@ -122,7 +122,7 @@ End Function
 '#WARNING :
 '#Contributors :
 '
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   SimilarFunction
 '
@@ -164,7 +164,7 @@ End Function
 '#WARNING :
 '#Contributors :
 '
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   SimilarFunction
 '
@@ -214,7 +214,7 @@ End Function 'SortArray
 '#WARNING :
 '#Contributors :
 '
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   SimilarFunction
 '

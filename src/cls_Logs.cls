@@ -1,3 +1,4 @@
+
 VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
@@ -14,13 +15,13 @@ Attribute VB_Exposed = False
 'Microsoft Scripting Runtime
 '
 '#description
-'classe qui permets de gérer les logs dans un fichier
-'elle commence par créer le dossier et les fichiers si ils n'existent pas,
-'puis on enregistre dans ces fichiers leurs logs associés (erreurs, actions,...)
+'classe qui permets de gÃ©rer les logs dans un fichier
+'elle commence par crÃ©er le dossier et les fichiers si ils n'existent pas,
+'puis on enregistre dans ces fichiers leurs logs associÃ©s (erreurs, actions,...)
 '
 '
-'Enum à copier/coller dans le Références Global de l'application maître
-'Afin de l'utiliser lors de l'appel de la méthode Log_Action
+'Enum Ã  copier/coller dans le RÃ©fÃ©rences Global de l'application maÃ®tre
+'Afin de l'utiliser lors de l'appel de la mÃ©thode Log_Action
 'Public Enum Actions
 '    Ouvrir = 0
 '    Creer = 1
@@ -30,25 +31,25 @@ Attribute VB_Exposed = False
 '    Sauvegarder = 5
 '    Envoyer = 6
 '    Fermer = 7
-'    Sélectionner = 8
+'    Sï¿½lectionner = 8
 'End Enum
 '
 '#exemple
-'--- méthode test ---'
+'--- mÃ©thode test ---'
 'Sub Test()
 '
-'    'déclarations
+'    'dÃ©clarations
 '    Dim logs As cls_Logs
 '    Dim i_test As Integer
 '
 '    'gestion des erreurs
 '    On Error GoTo end_err
 '
-'    'création d'une instance de cls_log
+'    'crÃ©ation d'une instance de cls_log
 '    Set logs = New cls_Logs
 '    Call logs.Log_Action("Test action", Actions.Ouvrir, Array("1", "2", "3"))
 '
-'    'création erreur
+'    'crÃ©ation erreur
 '    i_test = 65 + 342345 * 23343 * 998
 '
 '    Exit Sub
@@ -67,7 +68,7 @@ Attribute VB_Exposed = False
 '#Version :
 '
 '#References : Reference_Name
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   MethodsName
 '
@@ -86,7 +87,7 @@ Private Const m_dossier As String = "Logs"
 Private Const M_FICHIER_ERREURS As String = "logs_erreurs.lfo"                 'logs erreurs
 Private Const M_FICHIER_ACTIONS As String = "logs_actions.lfo"                  'logs actions
 
-'séparateurs
+'sÃ©parateurs
 Private Const SEP_LOG As String = "|"
 Private Const SEP_DETAILS As String = ";"
 Private Const SEP_DOSSIER As String = "\"
@@ -94,7 +95,7 @@ Private Const SEP_DOSSIER As String = "\"
 'taille des archives en Bytes
 Private Const SIZE_ARCHIVE As Long = 52428800
 
-'entêtes des fichiers logs
+'entÃªtes des fichiers logs
 Private Const M_HEADS_ERREURS As String = "date|heure|login|Outil|fichier|emplacement|erreur|query|info_1|info_2|info_3"
 Private Const M_HEADS_ACTIONS As String = "date|heure|login|Outil|fichier|emplacement|action|details"
 
@@ -103,7 +104,7 @@ Private m_login As String
 
 Private m_Actions As Variant
 
-'variable pour logs personnalisé
+'variable pour logs personnalisÃ©
 Private perso_dossier As String
 Private perso_fichier As String
 Private perso_heads As String
@@ -117,7 +118,7 @@ End Type
 
 '-------------------------------------------------------------------------------------
 '#description
-'propriété permettant d'affecter un dossier perso
+'propriÃ©tÃ© permettant d'affecter un dossier perso
 '-------------------------------------------------------------------------------------
 Property Let Dossier(ByVal s_valeur As String)
 
@@ -130,7 +131,7 @@ End Property '--- Dossier ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'propriété permettant d'affecter un fichier perso
+'propriÃ©tÃ© permettant d'affecter un fichier perso
 '-------------------------------------------------------------------------------------
 Property Let Fichier(ByVal s_valeur As String)
 
@@ -142,11 +143,11 @@ End Property '--- Fichier ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'propriété permettant d'affecter une entête perso
+'propriÃ©tÃ© permettant d'affecter une entÃªte perso
 '-------------------------------------------------------------------------------------
 Property Let Entetes(ByVal s_valeur As String)
 
-    'affectation de l'entête au log perso
+    'affectation de l'entÃªte au log perso
     perso_heads = s_valeur
     
 End Property '--- Entetes ---'
@@ -154,10 +155,10 @@ End Property '--- Entetes ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode d'initialisation de la classe
+'mÃ©thode d'initialisation de la classe
 '
 '#important
-'cette méthode équivalente à un constructeur nous permets de récupérer l'utilisateur
+'cette mÃ©thode Ã©quivalente Ã  un constructeur nous permets de rÃ©cupÃ©rer l'utilisateur
 'actif et d'initialiser les fichiers logs
 '-------------------------------------------------------------------------------------
 Private Sub Class_Initialize()
@@ -165,9 +166,9 @@ Private Sub Class_Initialize()
     'utilisateur actif
     m_login = Environ("username")
     
-    m_Actions = Array("Ouvrir", "Creer", "Modifier", "Annuler", "Supprimer", "Sauvegarder", "Envoyer", "Fermer", "Sélectionner")
+    m_Actions = Array("Ouvrir", "Creer", "Modifier", "Annuler", "Supprimer", "Sauvegarder", "Envoyer", "Fermer", "SÃ©lectionner")
         
-    'valeurs personnalisées
+    'valeurs personnalisÃ©es
     perso_dossier = ""
     perso_fichier = ""
     perso_heads = ""
@@ -176,10 +177,10 @@ End Sub '--- Class_Initialize ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode de terminaison de la classe
+'mÃ©thode de terminaison de la classe
 '
 '#important
-'cette méthode équivalente à un destructeur nous permets de nettoyer
+'cette mÃ©thode Ã©quivalente Ã  un destructeur nous permets de nettoyer
 'les valeurs
 '-------------------------------------------------------------------------------------
 Private Sub Class_Terminate()
@@ -191,17 +192,17 @@ End Sub '--- Class_Terminate ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode qui log une erreur
+'mÃ©thode qui log une erreur
 '
-'#paramètre
-'p_location: nom de la méthode ou fonction qui envoi l'erreur
+'#paramÃ©tre
+'p_location: nom de la mÃ©thode ou fonction qui envoi l'erreur
 '
 '#important
-'cette méthode sauvegarde l'erreur puis la supprime
+'cette mÃ©thode sauvegarde l'erreur puis la supprime
 '-------------------------------------------------------------------------------------
 Sub Log_Erreur(ByVal p_location As String, Optional p_Query As String = "", Optional info_1 As String = "", Optional info_2 As String = "", Optional info_3 As String = "")
 
-    'déclarations
+    'dÃ©clarations
     Dim s_fichier As String
     Dim s_error As Erreur
         
@@ -214,7 +215,7 @@ Sub Log_Erreur(ByVal p_location As String, Optional p_Query As String = "", Opti
     'init nom du fichier
     s_fichier = ThisWorkbook.path & SEP_DOSSIER & m_dossier & SEP_DOSSIER & M_FICHIER_ERREURS
         
-    'vérification des fichiers
+    'vÃ©rification des fichiers
     If (Not fn_initialisation) Then Exit Sub
     
     'ajoute le log erreur
@@ -238,22 +239,22 @@ End Sub '--- Log_Erreur ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode qui log une action
+'mÃ©thode qui log une action
 '
-'#paramètre
-'p_location: nom de la méthode ou fonction qui envoi l'action
-'p_action: action lancée
+'#paramÃ©tre
+'p_location: nom de la mÃ©thode ou fonction qui envoi l'action
+'p_action: action lancÃ©e
 '
 '#important
-'cette méthode sauvegarder une action avec des points de répères
-'numérotés (index) et temporels (timer)
+'cette mÃ©thode sauvegarder une action avec des points de rÃ©pÃ©res
+'numÃ©rotÃ©s (index) et temporels (timer)
 '-------------------------------------------------------------------------------------
 Sub Log_Action(ByVal p_location As String, ByVal p_Action As Integer, ByRef p_details As Variant)
 
-    'déclarations
+    'dÃ©clarations
     Dim s_fichier As String
     
-    'vérification des fichiers
+    'vÃ©rification des fichiers
     If (Not fn_initialisation) Then Exit Sub
 
     'init nom du fichier
@@ -274,21 +275,21 @@ End Sub '--- Log_Action ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode qui log des données personnalisées
+'mÃ©thode qui log des donnÃ©es personnalisÃ©es
 '
-'#paramètre
-'p_datas: tableau des valeurs à ajouter en ligne
+'#paramÃ¨tre
+'p_datas: tableau des valeurs Ã  ajouter en ligne
 '
 '#important
-'le tableau ne doit avoir qu'une seule dimension car un join est utilisé
-'pour créer la ligne
+'le tableau ne doit avoir qu'une seule dimension car un join est utilisÃ©
+'pour crÃ©er la ligne
 '-------------------------------------------------------------------------------------
 Sub Log_Perso(ByRef p_datas As Variant)
 
-    'déclarations
+    'dÃ©clarations
     Dim s_fichier As String
     
-    'vérification des fichiers
+    'vÃ©rification des fichiers
     If (Not fn_initialisation_perso) Then Exit Sub
 
     'init nom du fichier
@@ -354,7 +355,7 @@ End Function '--- fn_initialisation ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'fonction qui initialise le dossier et le fichier log personnalisé
+'fonction qui initialise le dossier et le fichier log personnalisÃ©
 '-------------------------------------------------------------------------------------
 Private Function fn_initialisation_perso() As Boolean
 
@@ -373,7 +374,7 @@ Private Function fn_initialisation_perso() As Boolean
     If (Dir(perso_dossier, vbDirectory) = "") Then GoTo fn_initialisation_perso_end
     If (Right(perso_dossier, 1) <> SEP_DOSSIER) Then perso_dossier = perso_dossier & SEP_DOSSIER
         
-    'fichier log perso avec entêtes
+    'fichier log perso avec entÃªtes
     If (Trim(perso_fichier) = "" Or Trim(perso_heads) = "") Then GoTo fn_initialisation_perso_end
         
     s_fichier = perso_dossier & perso_fichier
@@ -397,20 +398,20 @@ End Function '--- fn_initialisation_perso ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode qui gère la création d'un fichier type texte
+'mÃ©thode qui gÃ©re la crÃ©ation d'un fichier type texte
 '-------------------------------------------------------------------------------------
 Private Sub mt_textfile_create(ByVal p_path As String, ByVal p_entetes As String)
 
-    'déclarations
+    'dÃ©clarations
     Dim TextFile As Integer
 
-    'détermine le numéro de fichier texte à utiliser
+    'dÃ©termine le numÃ©ro de fichier texte Ã  utiliser
     TextFile = FreeFile
 
-    'création du fichier
+    'crÃ©ation du fichier
     Open p_path For Output As TextFile
 
-    'ajoute les entêtes
+    'ajoute les entÃªtes
     Print #TextFile, p_entetes
 
     'sauvegarde et ferme le fichier
@@ -420,14 +421,14 @@ End Sub '--- mt_textfile_create ---'
 
 '-------------------------------------------------------------------------------------
 '#description
-'méthode qui gère l'ajout de données à un fichier type texte
+'mÃ thode qui gÃ¨re l'ajout de donnÃ©es Ã  un fichier type texte
 '-------------------------------------------------------------------------------------
 Private Sub mt_textfile_append(ByVal p_path As String, ByVal p_msg As String)
 
-    'déclarations
+    'dÃ©clarations
     Dim TextFile As Integer
 
-    'détermine le numéro de fichier texte à utiliser
+    'dÃ©termine le numÃ©ro de fichier texte Ã  utiliser
     TextFile = FreeFile
 
     'ouverture du fichier

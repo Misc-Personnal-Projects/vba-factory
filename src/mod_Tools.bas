@@ -8,7 +8,7 @@ Attribute VB_Name = "mod_Tools"
 ' 09.04.21: modif GetUNCPath to get correct path on local drive
 '
 '#References : Reference_Name
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   FunctionName :
 '   ProcedureName :
@@ -28,7 +28,7 @@ Option Explicit
 '#WARNING :
 '#Contributors :
 '
-'#Dependencies : classes à importer
+'#Dependencies : classes Ã  importer
 '#Related :
 '   SimilarFunction
 '
@@ -83,7 +83,7 @@ End Function '--- GetUNCPath ---'
 '#Name :            GetFileInformation
 '#Description :     Get information of files from a source folder
 '#Warning :         Need Scripting Runtime Reference
-'#Contributors :    Jérôme Favre-Rochex
+'#Contributors :    JÃ©rÃ´me Favre-Rochex
 '#Creation Date :   06.05.2021
 '#Version :         1.0.0
 '
@@ -139,7 +139,7 @@ End Function '--- GetFileInformation ---'
 '#Name :            CopyingAFile
 '#Description :     Copying any tipe of file from a source folder to a destination folder
 '#Warning :         Need Scripting Runtime Reference
-'#Contributors :    Victor Hüni
+'#Contributors :    Victor HÃ¼ni
 '#Creation Date :   15.12.2020
 '#Version :         1.0.0
 '
@@ -223,7 +223,7 @@ End Function
 '       - Animations
 '
 '#Warning :         This function should be use at the begin of the procedure where you to disable everything and MUST BE ADDED AT THE END TO REVERT THE EFFECT
-'#Contributors :    Victor Hüni
+'#Contributors :    Victor HÃ¼ni
 '#Creation Date :   15.12.2020
 '#Version :         1.0.0
 '
