@@ -11,7 +11,7 @@ Attribute VB_Exposed = False
 '#Name : cls_Database
 '
 '#Description :
-'   This module is the hear & soul of the application Backend. It's mixing ADO function & DAO function
+'   This module is the heart & soul of the VBA application backend. It's mixing ADO function & DAO function to to CRUD operation & design ACCDB
 '   - Database connection
 '   - Query Execution
 '   - Database Design
@@ -34,9 +34,6 @@ Option Explicit
 '====================================================================================================================================================
 '   MEMBERS
 '===================================================================================================================================================
-
-'Custom Error Type
-Private Const ERROR_UNSUPPORTED_TYPE_PARAM As Long = vbObjectError + 513
 
 'Logs
 Private logs As cls_Logs
